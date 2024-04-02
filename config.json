@@ -1,6 +1,6 @@
 {
-	"ip":"vimalspidy333.aternos.me",
-	"port": "25565",
+	"ip":"serverbiasalcpt.aternos.me",
+	"port": "44377",
 	"name": "afkbot1",
-	"auto-night-skip":"true"
+	"auto-night-skip":"false"
 }
