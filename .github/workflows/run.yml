@@ -1,0 +1,24 @@
+name: Restart Server
+
+on:
+  schedule:
+    - cron: "0 */5 * * *"
+  push:
+    branches: [ main ]
+
+jobs:
+  restart:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+
+    - name: Stop Server
+      run: |
+        PID=$(pgrep -f 'node index.js')
+        kill "$PID"
+
+    - name: Start Server
+      run: node index.js
+      
